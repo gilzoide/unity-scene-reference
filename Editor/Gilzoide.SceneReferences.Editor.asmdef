@@ -1,0 +1,19 @@
+{
+    "name": "Gilzoide.SceneReferences.Editor",
+    "rootNamespace": "Gilzoide.SceneReferences.Editor",
+    "references": [
+        "Gilzoide.SceneReferences",
+        "Unity.EditorCoroutines.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
