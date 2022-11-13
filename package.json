@@ -1,0 +1,14 @@
+{
+  "name": "com.gilzoide.scene-reference",
+  "displayName": "Scene Reference",
+  "version": "1.0.0",
+  "description": "Automatically generated references to scenes configured in Build Settings",
+  "homepage": "https://github.com/gilzoide/unity-scene-enum",
+  "license": "Unlicense",
+  "author": {
+    "name": "Gil Barbosa Reis"
+  },
+  "dependencies": {
+    "com.unity.editorcoroutines": "1.0.0"
+  }
+}
