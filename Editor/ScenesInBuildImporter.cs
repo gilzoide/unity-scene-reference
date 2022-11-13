@@ -6,7 +6,7 @@ using UnityEditor.Experimental.AssetImporters;
 #endif
 using UnityEngine;
 
-namespace Gilzoide.SceneReferences.Editor
+namespace Gilzoide.SceneReference.Editor
 {
     [ScriptedImporter(0, "scenesinbuild")]
     public class ScenesInBuildImporter : ScriptedImporter

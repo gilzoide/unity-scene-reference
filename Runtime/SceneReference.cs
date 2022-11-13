@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Gilzoide.SceneReferences
+namespace Gilzoide.SceneReference
 {
     public class SceneReference : ScriptableObject
     {

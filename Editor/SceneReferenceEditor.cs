@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace Gilzoide.SceneReferences.Editor
+namespace Gilzoide.SceneReference.Editor
 {
     [CustomEditor(typeof(SceneReference))]
     public class SceneReferenceEditor : UnityEditor.Editor

@@ -4,7 +4,7 @@ using System.Linq;
 using Unity.EditorCoroutines.Editor;
 using UnityEditor;
 
-namespace Gilzoide.SceneReferences.Editor
+namespace Gilzoide.SceneReference.Editor
 {
     public class ScenesInBuildRefresher : UnityEditor.AssetModificationProcessor
     {

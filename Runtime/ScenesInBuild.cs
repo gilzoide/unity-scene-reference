@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Gilzoide.SceneReferences
+namespace Gilzoide.SceneReference
 {
     public class ScenesInBuild : ScriptableObject
     {

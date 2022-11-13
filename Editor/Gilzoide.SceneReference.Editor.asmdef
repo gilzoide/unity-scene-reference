@@ -1,9 +1,9 @@
 {
-    "name": "Gilzoide.SceneReferences.Editor",
-    "rootNamespace": "Gilzoide.SceneReferences.Editor",
+    "name": "Gilzoide.SceneReference.Editor",
+    "rootNamespace": "Gilzoide.SceneReference.Editor",
     "references": [
-        "Gilzoide.SceneReferences",
-        "Unity.EditorCoroutines.Editor"
+        "GUID:3dfdf38dd190a460d9f7ba357a25b045",
+        "GUID:478a2357cc57436488a56e564b08d223"
     ],
     "includePlatforms": [
         "Editor"

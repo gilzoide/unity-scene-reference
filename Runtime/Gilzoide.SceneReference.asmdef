@@ -1,6 +1,6 @@
 {
-    "name": "Gilzoide.SceneReferences",
-    "rootNamespace": "Gilzoide.SceneReferences",
+    "name": "Gilzoide.SceneReference",
+    "rootNamespace": "Gilzoide.SceneReference",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
