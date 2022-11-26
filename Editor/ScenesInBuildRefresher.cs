@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,17 @@ namespace Gilzoide.SceneReference.Editor
                 AssetDatabase.ImportAsset(path);
             }
         }
+
+        public static void RefreshNextFrame()
+        {
+            EditorCoroutineUtility.StartCoroutineOwnerless(RunNextFrame(Refresh));
+        }
         
         [InitializeOnLoadMethod]
         private static void Initialize()
         {
-            Refresh();
+            // skipping a frame is important to avoid crash in Unity 2019
+            RefreshNextFrame();
             EditorBuildSettings.sceneListChanged += Refresh;
         }
 
@@ -31,16 +38,16 @@ namespace Gilzoide.SceneReference.Editor
         {
             if (AssetDatabase.GetMainAssetTypeAtPath(sourcePath) == typeof(SceneAsset))
             {
-                EditorCoroutineUtility.StartCoroutineOwnerless(RefreshNextFrame());
+                RefreshNextFrame();
             }
 
             return AssetMoveResult.DidNotMove;
         }
 
-        private static IEnumerator RefreshNextFrame()
+        private static IEnumerator RunNextFrame(Action action)
         {
             yield return null;
-            Refresh();
+            action?.Invoke();
         }
     }
 }
