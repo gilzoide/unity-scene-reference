@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor;
 #if UNITY_2020_2_OR_NEWER
 using UnityEditor.AssetImporters;
@@ -13,9 +14,7 @@ namespace Gilzoide.SceneReference.Editor
     {
         public override void OnImportAsset(AssetImportContext ctx)
         {
-            var holder = ScriptableObject.CreateInstance<ScenesInBuild>();
-            ctx.AddObjectToAsset("main", holder);
-            ctx.SetMainObject(holder);
+            var sceneReferences = new List<SceneReference>();
             foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
             {
                 if (!scene.enabled)
@@ -32,7 +31,14 @@ namespace Gilzoide.SceneReference.Editor
                 var sceneReference = ScriptableObject.CreateInstance<SceneReference>();
                 sceneReference.Setup(asset);
                 ctx.AddObjectToAsset(scene.guid.ToString(), sceneReference);
+
+                sceneReferences.Add(sceneReference);
             }
+
+            var scenesInBuild = ScriptableObject.CreateInstance<ScenesInBuild>();
+            scenesInBuild.Setup(sceneReferences);
+            ctx.AddObjectToAsset("main", scenesInBuild);
+            ctx.SetMainObject(scenesInBuild);
         }
     }
 }
