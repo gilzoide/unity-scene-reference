@@ -7,6 +7,7 @@ namespace Gilzoide.SceneReference
     {
         [SerializeField] private SceneReference[] _sceneReferences;
 
+        /// <summary>SceneReference array containing the Scenes enabled in Build Settings.</summary>
         public SceneReference[] SceneReferences => _sceneReferences;
 
 #if UNITY_EDITOR
